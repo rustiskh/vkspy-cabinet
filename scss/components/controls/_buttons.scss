@@ -1,0 +1,119 @@
+.base-button {
+	padding: 2px 16px;
+	min-width: 54px;
+	height: 54px;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 21px;
+	letter-spacing: 0.02em;
+	border-radius: 12px;
+	background: $blue;
+	border: 1px solid $blue;
+	color: $white;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: 0.3s;
+
+	&__icon {
+		margin-right: 10px;
+	}
+
+	&_uppercase {
+		text-transform: uppercase;
+	}
+
+	&_large {
+		min-width: 58px;
+		height: 56px;
+	}
+
+	&_medium {
+		min-width: 48px;
+		height: 48px;
+	}
+
+	&_small {
+		min-width: 42px;
+		height: 42px;
+	}
+
+	&_micro {
+		min-width: 42px;
+		height: 29px;
+		border-radius: 8px;
+	}
+
+	&_outline {
+		background: $white;
+		color: $light-black;
+	}
+
+	&_textable {
+		padding: 0;
+		min-width: auto;
+		width: auto;
+		height: auto;
+		font-weight: normal;
+		font-size: 13px;
+		line-height: 21px;
+		letter-spacing: 0.02em;
+		color: $blue;
+		border: 0;
+		outline: 0;
+		box-shadow: none;
+		background: transparent !important;
+
+		&:hover {
+			color: $black !important;
+		}
+
+		&:disabled {
+			color: $gray !important;
+			cursor: not-allowed;
+		}
+	}
+
+	&:hover {
+		background: #2157b4;
+		border-color: #2157b4;
+		color: $white;
+	}
+
+	&:disabled {
+		color: $dark-gray;
+		border-color: $gray;
+		background: $gray;
+		cursor: not-allowed;
+	}
+
+	&:disabled &__icon * {
+		fill: $dark-gray;
+	}
+
+	&_success {
+		background: $white !important;
+		border: 1px solid #9ad677 !important;
+		color: #52ab1d !important;
+	}
+
+	&_success &__icon * {
+		fill: #52ab1d !important;
+	}
+
+	&_error {
+		background: $white !important;
+		border: 1px solid #ffc3ba !important;
+		color: #ee614d !important;
+	}
+
+	&_error &__icon {
+		@include background-image($size: auto);
+
+		background-image: url("../images/icons/cross-red.svg");
+
+		* {
+			display: none;
+		}
+	}
+}

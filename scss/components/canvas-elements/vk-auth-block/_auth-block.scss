@@ -1,0 +1,24 @@
+.auth-block {
+	order: 3;
+	.base-box {
+		&__text {
+			margin-top: 14px;
+		}
+	}
+
+	&__control {
+		margin-top: 24px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		row-gap: 24px;
+	}
+
+	&__auth-btn {
+		width: 300px;
+
+		@include tablet {
+			width: 310px;
+		}
+	}
+}

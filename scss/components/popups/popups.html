@@ -1,0 +1,85 @@
+<!-- Модальное окно авторизации в ВК. Закрытый аккаунт -->
+
+<div class="popup popup_privat-account-auth-vk">
+	<button class="close-btn popup__close-btn close-popup-item"></button>
+	<div class="popup__fade close-popup-item"></div>
+	<div class="popup__content">
+		<p class="popup__title">Анализ приватного аккаунта</p>
+		<p class="popup__text">Аккаунт, который вы хотите анализировать приватный, чтобы получить возможность анализировать его активность необходимо авторизоваться через аккаунт, <span class="popup-text_bold"> находящийся в “друзьях” у целевого аккаунта.</span> Анализ активности будет происходить через API запросы - это анонимно и цель не узнает о слежке</p>
+		<div class="popup__control">
+			<button class="base-button base-button_large popup__btn popup__btn_main">Авторизоваться через ВК</button>
+			<button class="base-button base-button_textable popup__btn close-popup-item popup__btn_secondary">Назад</button>
+		</div>
+	</div>
+</div>
+
+<!-- Модальное окно Отмена подписки -->
+
+<div class="popup popup_active popup_subscribe-cancel">
+	<button class="close-btn popup__close-btn close-popup-item"></button>
+	<div class="popup__fade close-popup-item"></div>
+	<div class="popup__content">
+		<p class="popup__title">Управление подпиской</p>
+		<p class="popup__text">Подписка на тариф ${tariff} за ${sum}₽ подключена и будет действовать до ${subscribe-date}. После этого произойдет автопродление подписки.</p>
+		<div class="popup__control">
+			<a href="/index.html" class="base-button base-button_large popup__btn popup__btn_main">Вернуться на главную</a>
+			<button class="base-button base-button_textable popup__btn popup__btn_secondary">Отменить подписку</button>
+		</div>
+	</div>
+</div>
+
+<!-- Модалка Выход из аккаунта -->
+
+<div class="popup popup_mini popup_active popup_logout">
+	<button class="close-btn popup__close-btn close-popup-item"></button>
+	<div class="popup__fade close-popup-item"></div>
+	<div class="popup__content">
+		<p class="popup__title">Вы уверены, что хотите выйти из аккаунта?</p>
+		<div class="popup__control">
+			<button class="base-button popup__btn popup__btn_secondary">Да</button>
+			<button class="base-button base-button_large popup__btn close-popup-item popup__btn_main">Нет</button>
+		</div>
+	</div>
+</div>
+
+<!-- Модалка отправки сообщения в ТП -->
+
+<div class="popup popup_active popup_active popup_support-massage-sended">
+	<button class="close-btn popup__close-btn close-popup-item"></button>
+	<div class="popup__fade close-popup-item"></div>
+	<div class="popup__content">
+		<p class="popup__title">Сообщение успешно отправлено</p>
+		<p class="popup__text">Ответ на ваше обращение поступит на указанную вами почту в ближайшее время</p>
+		<div class="popup__control">
+			<a href="/index.html" class="base-button base-button_large popup__btn popup__btn_main">Вернуться на Дашборд</a>
+		</div>
+	</div>
+</div>
+
+<!-- Модалка Провал попытки списания -->
+
+<div class="popup popup_active popup_active popup_recurrent-error">
+	<button class="close-btn popup__close-btn close-popup-item"></button>
+	<div class="popup__fade close-popup-item"></div>
+	<div class="popup__content">
+		<p class="popup__title">Ошибка продления подписки</p>
+		<p class="popup__text">К сожалению, автоматическое продление подписки не было осуществленно. Обновление данных приостановленно. Пожалуйста, перейдите в раздел Тарифы и оплатите нужный вам тариф.</p>
+		<div class="popup__control">
+			<a href="/settings-tariff.html" class="base-button base-button_large popup__btn popup__btn_main">Перейти к Тарифам</a>
+		</div>
+	</div>
+</div>
+
+<!-- Модалка Ручного продления (подписка отменена, срок доступа подходит к концу) -->
+
+<div class="popup popup_active popup_active popup_canceled-subscription-ending-period">
+	<button class="close-btn popup__close-btn close-popup-item"></button>
+	<div class="popup__fade close-popup-item"></div>
+	<div class="popup__content">
+		<p class="popup__title">Срок полного доступа на Сервис подходит к концу</p>
+		<p class="popup__text">Ваша подписка неактивна, а срок оплаченного периода подходит к концу. Чтобы снова смотреть все данные без ограничений - оплатите нужный вам тариф. В ином случае вы будете переведены на тариф “Бесплатный”</p>
+		<div class="popup__control">
+			<a href="/settings-tariff.html" class="base-button base-button_large popup__btn popup__btn_main">Перейти к Тарифам</a>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,35 @@
+.settings-instruction {
+	display: flex;
+	flex-direction: column;
+	row-gap: 14px;
+	max-width: 540px;
+	width: 100%;
+
+	@include tablet {
+		max-width: 310px;
+	}
+
+	&__text {
+		font-weight: 400;
+		font-size: 13px;
+		line-height: 21px;
+		letter-spacing: 0.02em;
+		color: $black;
+
+		&__title {
+			font-weight: 500;
+		}
+
+		&__subtitle {
+			font-weight: 400;
+		}
+
+		&__text {
+			color: $dark-gray;
+		}
+
+		&__img {
+			max-width: 460px;
+		}
+	}
+}

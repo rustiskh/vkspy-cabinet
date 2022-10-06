@@ -1,0 +1,46 @@
+.partnership-ref-table {
+	margin-top: 20px;
+
+	&__title {
+		margin-bottom: 14px;
+	}
+
+	&__text {
+		margin-bottom: 10px;
+	}
+	&__list {
+		display: flex;
+		flex-direction: column;
+		align-items: start;
+		height: 295px;
+		overflow-y: auto;
+
+		&-header {
+			display: flex;
+			margin-top: 10px;
+			margin-bottom: 14px;
+		}
+
+		&-title {
+			font-weight: 700;
+			font-size: 18px;
+			line-height: 20px;
+			color: $black;
+
+			&:first-child {
+				width: 136px;
+			}
+		}
+
+		&-item {
+			display: flex;
+			margin-bottom: 10px;
+			// justify-content: start;
+			// align-items: start;
+		}
+
+		&-date {
+			width: 136px;
+		}
+	}
+}

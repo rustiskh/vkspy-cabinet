@@ -1,0 +1,46 @@
+.base-switcher {
+	cursor: pointer;
+
+	&__input {
+		display: none;
+	}
+
+	&__item {
+		min-width: 26px;
+		width: 26px;
+		height: 12px;
+		border: 1px solid $gray;
+		border-radius: 12px;
+		transition: 0.3s;
+		position: relative;
+
+		&::before {
+			min-width: 16px;
+			width: 16px;
+			height: 16px;
+			content: "";
+			display: block;
+			position: absolute;
+			top: -3px;
+			left: -4px;
+			background: $dark-gray;
+			border-radius: 100%;
+			transition: 0.3s;
+		}
+	}
+
+	&__input:checked ~ &__item {
+		background: $light-gray;
+		border-color: $light-gray;
+
+		@include tablet {
+			background: $white;
+			border-color: $white;
+		}
+
+		&::before {
+			transform: translateX(16px);
+			background: $blue;
+		}
+	}
+}

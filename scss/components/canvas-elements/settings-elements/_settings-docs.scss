@@ -1,0 +1,18 @@
+.settings-docs {
+	display: flex;
+	flex-direction: column;
+	row-gap: 50px;
+	max-width: 540px;
+	width: 100%;
+
+	@include tablet {
+		max-width: 310px;
+	}
+
+	&__item {
+		display: flex;
+		flex-direction: column;
+		gap: 24px;
+		max-width: 310px;
+	}
+}

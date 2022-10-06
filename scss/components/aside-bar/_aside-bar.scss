@@ -1,0 +1,55 @@
+.aside-bar {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding: 20px 0 20px 20px;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	width: $aside-bar-width;
+	background: $black;
+	z-index: 120;
+
+	@include tablet {
+		position: fixed;
+		top: 0px;
+		left: -320px;
+		transition: 0.5s;
+
+		&_active {
+			left: 0px;
+			width: 100%;
+		}
+	}
+
+	&__header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-left: 10px;
+		margin-right: 33px;
+
+		&-logo-link {
+			height: 36px;
+		}
+	}
+
+	&__close-btn {
+		width: 36px;
+		height: 36px;
+		display: none;
+
+		&:hover {
+			svg {
+				path {
+					fill: $white;
+				}
+			}
+		}
+
+		@include tablet {
+			display: block;
+		}
+	}
+}

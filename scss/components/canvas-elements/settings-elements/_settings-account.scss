@@ -1,0 +1,109 @@
+.settings-account {
+	display: flex;
+	flex-direction: column;
+	row-gap: 20px;
+	max-width: 540px;
+	width: 100%;
+
+	@include tablet {
+		max-width: 310px;
+	}
+
+	&__password {
+		&-title {
+			margin-bottom: 14px;
+		}
+
+		&-fields {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			gap: 20px;
+
+			@include tablet {
+				flex-direction: column;
+			}
+
+			&-item {
+				width: calc((100% - 20px) / 2);
+
+				@include tablet {
+					margin: 0;
+					width: 100%;
+
+					&:not(:last-child) {
+						margin-bottom: 10px;
+					}
+				}
+			}
+		}
+	}
+
+	&__timezone {
+		&-title {
+			margin-bottom: 14px;
+		}
+
+		&-fields {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 20px;
+
+			&-item {
+				width: calc((100% - 20px) / 2);
+
+				@include tablet {
+					margin: 0;
+					width: 100%;
+
+					&:not(:last-child) {
+						margin-bottom: 10px;
+					}
+				}
+			}
+		}
+	}
+
+	&__target-account {
+		&-title {
+			margin-bottom: 14px;
+		}
+
+		&-fields {
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+			gap: 20px;
+
+			&-item {
+				width: calc((100% - 20px) / 2);
+
+				@include tablet {
+					margin: 0;
+					width: 100%;
+
+					&:not(:last-child) {
+						margin-bottom: 10px;
+					}
+				}
+
+				.suspect-info-block {
+					padding: 0px;
+					pointer-events: none;
+				}
+			}
+		}
+	}
+
+	&__vk-auth {
+		&-title {
+			margin-bottom: 14px;
+		}
+		&-text {
+			margin-bottom: 14px;
+		}
+		&-btn {
+			width: 310px;
+		}
+	}
+}

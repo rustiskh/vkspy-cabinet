@@ -1,0 +1,34 @@
+.settings-notifications {
+	display: flex;
+	flex-direction: column;
+	row-gap: 20px;
+	max-width: 540px;
+	width: 100%;
+
+	@include tablet {
+		max-width: 310px;
+	}
+
+	&__wrapper {
+		display: flex;
+		flex-direction: column;
+		gap: 14px;
+
+		&-title {
+			font-weight: 400;
+			font-size: 13px;
+			line-height: 21px;
+			color: $darken-gray;
+		}
+
+		&-item {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
+	}
+
+	&__btn {
+		max-width: 310px;
+	}
+}

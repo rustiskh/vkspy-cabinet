@@ -1,0 +1,16 @@
+.partnership-wallet-card {
+	max-width: 460px;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	row-gap: 14px;
+
+	@include tablet {
+		max-width: 310px;
+	}
+
+	&__btn {
+		max-width: 310px;
+		margin-top: 24px;
+	}
+}

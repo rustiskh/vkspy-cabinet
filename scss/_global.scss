@@ -1,0 +1,33 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Roboto", sans-serif;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	background-color: $light-gray;
+
+	@include tablet {
+		background-color: $white;
+	}
+}
+
+button {
+	cursor: pointer;
+	background-color: transparent;
+	border: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+.header-logo {
+	width: 182px;
+	height: 36px;
+}

@@ -1,0 +1,17 @@
+<button class="card-data-btn">
+	<p class="card-data-btn__title">${data-name}</p>
+	<div class="card-data-btn__count">
+		<div class="card-data-btn__total">${count}</div>
+		<div class="card-data-btn__total_loading-icon"></div>
+		<div class="card-data-btn__count-changes">
+			<div class="card-data-btn__total_plus">(+${count-plus})</div>
+			<div class="card-data-btn__total_minus">(-${count-minus})</div>
+		</div>
+	</div>
+</button>
+
+<!-- Если состояние _empty, то в total выводим XX 
+	<div class="card-data-btn__total">XX</div> -->
+
+<!-- Если состояние _loading, то в total выводим "--" 
+	<div class="card-data-btn__total">--</div> -->

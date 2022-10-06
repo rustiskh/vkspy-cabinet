@@ -1,0 +1,135 @@
+.base-select {
+	position: relative;
+	width: 100%;
+
+	&__back-drop {
+		position: fixed;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		pointer-events: none;
+		opacity: 0;
+		background: rgba($black, 0.8);
+		transition: 0.3s;
+		z-index: 3;
+	}
+
+	&__field {
+		padding: 11px 16px;
+		width: 100%;
+		background: $white;
+		border: 1px solid $gray;
+		border-radius: 12px;
+		font-weight: 500;
+		font-size: 14px;
+		line-height: 20px;
+		letter-spacing: 0.02em;
+		color: $dark-black;
+		cursor: pointer;
+		display: flex;
+		align-items: center;
+		position: relative;
+		z-index: 4;
+
+		&:hover {
+			border-color: $blue;
+		}
+
+		&::after {
+			@include background-image($size: contain);
+
+			content: "";
+			display: block;
+			min-width: 8px;
+			width: 8px;
+			height: 100%;
+			background-image: url("../images/icons/arrow-up-gray.svg");
+			position: absolute;
+			right: 15px;
+			top: 0;
+			transform: rotate(180deg);
+			transition: 0.3s;
+		}
+
+		&-img {
+			@include background-image($size: contain);
+
+			margin-right: 6px;
+			min-width: 26px;
+			width: 26px;
+			height: 26px;
+			font-size: 0;
+		}
+	}
+
+	&__list {
+		padding: 3px 43px 27px;
+		display: none;
+		position: absolute;
+		top: calc(100% - 1px);
+		border: 1px solid $gray;
+		left: 0;
+		right: 0;
+		z-index: 6;
+		background: $white;
+		flex-direction: column;
+		transition: 0.3s;
+
+		@include tablet {
+			border-color: transparent !important;
+		}
+
+		&-item {
+			font-weight: 500;
+			font-size: 14px;
+			line-height: 20px;
+			letter-spacing: 0.02em;
+			color: $dark-black;
+			display: flex;
+			align-items: center;
+			cursor: pointer;
+
+			&:not(:last-child) {
+				margin-bottom: 10px;
+			}
+
+			&-img {
+				@include background-image($size: contain);
+
+				margin-right: 6px;
+				min-width: 26px;
+				width: 26px;
+				height: 26px;
+			}
+		}
+	}
+
+	&_active &__field {
+		border-color: $darken-gray;
+		border-bottom-color: transparent;
+		border-radius: 12px 12px 0 0;
+		z-index: 11;
+
+		&::after {
+			transform: rotate(0);
+		}
+	}
+
+	&_active &__list {
+		display: flex;
+		border-color: $darken-gray;
+		border-top: 0;
+		border-radius: 12px;
+		border-radius: 0 0 12px 12px;
+		z-index: 12;
+	}
+
+	&_active &__back-drop {
+		@include tablet {
+			opacity: 1;
+			pointer-events: initial;
+			z-index: 10;
+		}
+	}
+}

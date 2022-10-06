@@ -1,0 +1,32 @@
+.mobile-header {
+	display: none;
+	align-items: center;
+	justify-content: space-between;
+
+	height: 80px;
+	width: 100%;
+	padding: 22px 33px;
+	background: $black;
+
+	position: sticky;
+	top: 0px;
+	z-index: 100;
+
+	@include tablet {
+		display: flex;
+	}
+
+	&__hamburger {
+		width: 36px;
+		height: 36px;
+		cursor: pointer;
+
+		&:hover {
+			svg {
+				rect {
+					fill: $white;
+				}
+			}
+		}
+	}
+}

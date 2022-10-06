@@ -1,0 +1,17 @@
+.settings-promocode {
+	display: flex;
+	flex-direction: column;
+	row-gap: 20px;
+	max-width: 540px;
+	width: 100%;
+
+	@include tablet {
+		max-width: 310px;
+	}
+
+	&__form {
+		display: flex;
+		flex-direction: column;
+		row-gap: 14px;
+	}
+}

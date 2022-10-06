@@ -1,0 +1,156 @@
+.main-container {
+	padding: 20px 20px 20px calc(#{$aside-bar-width} + 20px);
+	display: flex;
+	flex-wrap: wrap;
+	gap: 20px;
+	align-items: flex-start;
+
+	@media screen and (max-width: 1298px) {
+		padding: 20px 20px 20px calc(#{$aside-bar-width} + 60px);
+	}
+
+	@include tablet {
+		// padding: 0 0 $aside-bar-height-mobile;
+		padding: 0 0 0;
+
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 0px;
+	}
+}
+
+.base-box {
+	max-width: 460px;
+	padding: 30px 40px;
+	background: $white;
+	box-shadow: 0px 10px 25px #e8e8ee;
+	border-radius: 12px;
+
+	@include tablet {
+		width: 310px;
+		padding-left: 0px;
+		padding-right: 0px;
+		background: transparent;
+		box-shadow: none;
+	}
+
+	&__title {
+		font-weight: 700;
+		font-size: 18px;
+		line-height: 20px;
+		color: $black;
+	}
+
+	&__text {
+		font-weight: 400;
+		font-size: 13px;
+		line-height: 21px;
+		letter-spacing: 0.02em;
+		color: $dark-gray;
+	}
+}
+
+.error-text {
+	font-weight: 400;
+	font-size: 13px;
+	line-height: 21px;
+	letter-spacing: 0.02em;
+	color: $red;
+	margin-top: 10px;
+}
+
+.success-text {
+	font-weight: 400;
+	font-size: 13px;
+	line-height: 21px;
+	letter-spacing: 0.02em;
+	color: $green;
+	margin-top: 10px;
+}
+
+.user-avatar {
+	width: 66px;
+	height: 66px;
+
+	&_mini {
+		width: 42px;
+		height: 42px;
+	}
+}
+
+.card-devider {
+	border: 1px solid $light-gray;
+	background: $light-gray;
+}
+
+.canvas-mobile-header {
+	// padding: 20px 53px;
+	height: 60px;
+	width: 310px;
+	font-weight: bold;
+	font-size: 18px;
+	line-height: 20px;
+	display: none;
+	align-items: center;
+	color: $black;
+	background: $white;
+	position: relative;
+
+	@include tablet {
+		display: flex;
+	}
+
+	&__back {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-right: 10px;
+	}
+}
+
+.tablet-hide {
+	@include tablet {
+		display: none !important;
+		// padding-top: 34px;
+	}
+}
+
+.settings-footer {
+	padding: 35px 10px;
+	max-width: 460px;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	order: 3;
+	// grid-column: 1/2;
+
+	@include laptop {
+		// max-width: 100%;
+	}
+
+	@include tablet {
+		max-width: 310px;
+		// display: none;
+		// background: $white;
+	}
+
+	&__logo {
+		@include background-image($size: contain);
+
+		margin-bottom: 20px;
+		background-image: url("../images/icons/logo-black.svg");
+		min-width: 176px;
+		width: 176px;
+		height: 35px;
+	}
+
+	&__description {
+		max-width: 170px;
+		font-size: 13px;
+		line-height: 21px;
+		text-align: center;
+		color: $dark-gray;
+	}
+}

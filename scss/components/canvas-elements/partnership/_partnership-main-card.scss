@@ -1,0 +1,61 @@
+.partnership-main-card {
+	max-width: 460px;
+	width: 100%;
+
+	@include tablet {
+		max-width: 310px;
+	}
+
+	&__title {
+		margin-bottom: 14px;
+	}
+
+	&__text {
+		margin-bottom: 14px;
+	}
+
+	&__link {
+		font-weight: 500;
+		font-size: 13px;
+		line-height: 21px;
+		letter-spacing: 0.02em;
+		color: $darken-gray;
+		margin-bottom: 14px;
+	}
+
+	&__item {
+		margin-bottom: 40px;
+
+		&:last-child {
+			margin-bottom: 0px;
+		}
+	}
+
+	&__btn {
+		width: 310px;
+	}
+
+	&__result-wrapper {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 8px 26px;
+	}
+
+	&__withdraw-form {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 14px 26px;
+
+		&-item {
+			width: 177px;
+
+			@include tablet {
+				width: 100%;
+			}
+		}
+
+		.error-text {
+			margin-top: 0px;
+		}
+	}
+}

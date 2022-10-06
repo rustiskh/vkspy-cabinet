@@ -1,0 +1,147 @@
+.card-data-btn {
+	padding: 12px 16px;
+	border-radius: 12px;
+	width: 177px;
+	height: fit-content;
+	border: 1px solid $gray;
+
+	@include tablet {
+		width: 142px;
+	}
+
+	&__title {
+		font-weight: 400;
+		font-size: 15px;
+		line-height: 14px;
+		color: $black;
+		text-align: left;
+		margin-bottom: 8px;
+	}
+
+	&__count {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 8px;
+	}
+
+	&__count-changes {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 2px;
+	}
+
+	&__total,
+	&__total_plus,
+	&__total_minus {
+		font-weight: 700;
+		font-size: 20px;
+		line-height: 22px;
+		color: $black;
+
+		&_plus {
+			color: $green;
+		}
+
+		&_minus {
+			color: $red;
+		}
+
+		&_loading-icon {
+			display: none;
+		}
+	}
+
+	&_empty {
+		background: $light-gray;
+		border: 1px solid $gray;
+		pointer-events: none;
+
+		.card-data-btn {
+			&__title {
+				color: $dark-gray;
+			}
+
+			&__count-changes {
+				display: none;
+			}
+
+			&__total {
+				color: $gray;
+			}
+		}
+	}
+
+	&_loading {
+		background: $light-gray;
+		border: 1px solid $gray;
+		pointer-events: none;
+
+		.card-data-btn {
+			&__title {
+				color: $dark-gray;
+			}
+
+			&__count-changes {
+				display: none;
+			}
+
+			&__total {
+				color: $black;
+
+				&_loading-icon {
+					display: block;
+					height: 22px;
+					width: 22px;
+
+					@include background-image($size: contain);
+					background-image: url(../images/icons/loading.svg);
+
+					animation: rotation 2s linear infinite;
+					@keyframes rotation {
+						100% {
+							transform: rotate(360deg);
+						}
+					}
+				}
+			}
+		}
+	}
+
+	&_active {
+		// background: $light-gray;
+		border: 1px solid $blue;
+
+		.card-data-btn {
+			&__title {
+				color: $blue;
+			}
+
+			&__total {
+				color: $blue;
+			}
+		}
+	}
+
+	&:hover {
+		background: $blue;
+		border: 1px solid $blue;
+
+		.card-data-btn {
+			&__title {
+				color: $white !important;
+			}
+
+			&__total {
+				color: $black;
+
+				&_plus {
+					color: $white !important;
+				}
+
+				&_minus {
+					color: $white !important;
+				}
+			}
+		}
+	}
+}

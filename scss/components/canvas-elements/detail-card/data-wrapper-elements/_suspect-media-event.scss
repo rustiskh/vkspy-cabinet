@@ -1,0 +1,27 @@
+.suspect-media-event {
+	&__photo-content,
+	&__video-content {
+		border-radius: 12px;
+		width: 100%;
+		&_hide {
+			height: 200px;
+			width: 100%;
+			height: 200px;
+			border: 1px solid $gray;
+			@include background-image($size: cover);
+			background-image: url(../images/icons/card-media-empty.svg);
+		}
+	}
+
+	&_photo {
+		.suspect-media-event__video-content {
+			display: none;
+		}
+	}
+
+	&_video {
+		.suspect-media-event__photo-content {
+			display: none;
+		}
+	}
+}

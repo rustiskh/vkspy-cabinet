@@ -1,0 +1,37 @@
+.likes-event {
+	border-radius: 12px;
+
+	&:hover {
+		background: $light-gray;
+	}
+
+	.suspect-info-block {
+	}
+
+	&__control {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		gap: 6px;
+		margin: 0px 10px 10px 10px;
+	}
+
+	&_extended {
+		&:hover {
+			background: transparent;
+		}
+	}
+}
+
+.likes-event-item {
+	.suspect-info-block {
+		&:hover {
+			background: transparent;
+			cursor: default;
+		}
+	}
+
+	&__content-wrapper {
+		width: 100%;
+	}
+}

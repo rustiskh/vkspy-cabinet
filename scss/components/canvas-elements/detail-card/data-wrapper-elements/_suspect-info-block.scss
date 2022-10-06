@@ -1,0 +1,134 @@
+.suspect-info-block {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 10px;
+	gap: 24px;
+	border-radius: 12px;
+	cursor: pointer;
+
+	@include tablet {
+		gap: 3px;
+	}
+
+	&__info {
+		display: flex;
+		align-items: center;
+		gap: 12px;
+	}
+
+	&__text-info {
+		max-width: 256px;
+	}
+
+	&__suspect-name {
+		font-weight: 400;
+		font-size: 15px;
+		line-height: 14px;
+		color: $black;
+		margin-bottom: 6px;
+	}
+
+	&__status-info {
+		display: flex;
+		gap: 8px;
+	}
+
+	&__action-date,
+	&__action-like-text {
+		font-weight: 400;
+		font-size: 13px;
+		line-height: 21px;
+		letter-spacing: 0.02em;
+		color: $dark-gray;
+	}
+	&__action-type {
+		font-weight: 400;
+		font-size: 13px;
+		line-height: 21px;
+		letter-spacing: 0.02em;
+
+		&_plus {
+			display: none;
+			color: $green;
+		}
+		&_minus {
+			display: none;
+			color: $red;
+		}
+	}
+
+	&__unlock-btn {
+		display: none;
+		padding: 3px 16px;
+
+		@include tablet {
+			padding: 3px 10px;
+		}
+	}
+
+	&_plus {
+		.suspect-info-block {
+			&__action-type {
+				&_plus {
+					display: block;
+				}
+			}
+		}
+	}
+
+	&_minus {
+		.suspect-info-block {
+			&__action-type {
+				&_minus {
+					display: block;
+				}
+			}
+		}
+	}
+
+	&_hide {
+		.suspect-info-block {
+			pointer-events: none;
+
+			&__text-info {
+				max-width: 256px;
+			}
+
+			&__suspect-name {
+				color: $dark-gray;
+			}
+
+			&__status-info {
+				display: flex;
+				gap: 8px;
+			}
+
+			&__action-date {
+				color: $gray;
+			}
+
+			&__new-tab-icon {
+				display: none;
+			}
+
+			&__unlock-btn {
+				display: block;
+			}
+		}
+	}
+
+	&:hover {
+		background: $light-gray;
+
+		.suspect-info-block__new-tab-icon {
+			svg {
+				g {
+					path {
+						fill: #2157b4;
+					}
+				}
+			}
+		}
+	}
+}

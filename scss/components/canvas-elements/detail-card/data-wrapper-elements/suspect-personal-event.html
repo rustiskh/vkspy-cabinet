@@ -1,0 +1,19 @@
+<!-- Событие Личных данных suspect-personal-event имеет 4 варианта
+_(без модификатора) - Только текущие данные - название типа данных и текстовый контент
+suspect-personal-event_changed - изменение, когда вместо старого текста появляется новый - 
+показывается новый текст и зачеркнутый Старый
+suspect-personal-event_plus - добавлены новые данные (старых не было). Показывается дата добавления
+и добавленный текст
+suspect-personal-event_minus - данные удалены (новых не появилось). Показывается дата удаления и перечернкутый
+удаленный текст -->
+
+<div class="suspect-personal-event">
+	<div class="suspect-personal-event__header">
+		<p class="suspect-personal-event__title">${data-type}</p>
+		<div class="suspect-personal-event__type suspect-personal-event__type_plus">Новый ${date-of-change}</div>
+		<div class="suspect-personal-event__type suspect-personal-event__type_munis">Удален ${date-of-change}</div>
+	</div>
+	<p class="suspect-personal-event__text">${current-text}</p>
+	<p class="suspect-personal-event__title suspect-personal-event__title_old">Старый</p>
+	<div class="suspect-personal-event__text suspect-personal-event__text_delited">${old-text}</div>
+</div>

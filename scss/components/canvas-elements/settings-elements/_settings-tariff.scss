@@ -1,0 +1,127 @@
+.settings-tariff {
+	display: flex;
+	flex-direction: column;
+	row-gap: 20px;
+	max-width: 540px;
+	width: 100%;
+
+	@include tablet {
+		max-width: 310px;
+	}
+
+	&__current-tariff-block,
+	&__buying-tariff-block-wrapper {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 10px;
+	}
+
+	&__buy-btn {
+		width: 205px;
+		box-shadow: 0px 15px 35px rgba(77, 137, 238, 0.4);
+	}
+
+	&__tariff-payment-block {
+		display: flex;
+		flex-direction: column;
+		gap: 14px;
+	}
+}
+
+.tariff-card {
+	width: 220px;
+	height: 139px;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	padding: 30px;
+	gap: 4px;
+	background: $white;
+	border: 1px solid $gray;
+	border-radius: 12px;
+
+	&__title {
+		font-weight: 400;
+		font-size: 15px;
+		line-height: 20px;
+		color: $darken-gray;
+	}
+
+	&__tariff-name {
+		font-family: "Roboto Slab";
+		font-style: normal;
+		font-weight: 500;
+		font-size: 24px;
+		line-height: 31px;
+		color: $black;
+	}
+
+	&__price-wrapper {
+		display: flex;
+		gap: 8px;
+	}
+
+	&__price {
+		&-current {
+			font-weight: 400;
+			font-size: 15px;
+			line-height: 20px;
+			color: $darken-gray;
+		}
+
+		&-old {
+			font-weight: 400;
+			font-size: 15px;
+			line-height: 20px;
+			text-decoration-line: line-through;
+			color: $gray;
+		}
+	}
+
+	&_info-card {
+		border: none;
+		pointer-events: none;
+	}
+
+	&:hover {
+		background: $blue;
+		border-color: $blue;
+
+		.tariff-card__title {
+			color: $white;
+		}
+
+		.tariff-card__price {
+			&-current {
+				color: $white;
+			}
+
+			&-old {
+				color: $darken-gray;
+			}
+		}
+	}
+
+	&_active {
+		border-color: $blue;
+		pointer-events: none;
+
+		.tariff-card__title {
+			color: $blue;
+		}
+
+		.tariff-card__tariff-name {
+			color: $blue;
+		}
+
+		.tariff-card__price {
+			&-current {
+				color: $blue;
+			}
+
+			&-old {
+				color: $gray;
+			}
+		}
+	}
+}
