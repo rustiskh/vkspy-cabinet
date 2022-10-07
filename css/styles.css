@@ -1541,6 +1541,9 @@ a {
   -webkit-box-ordinal-group: 4;
       -ms-flex-order: 3;
           order: 3;
+  background: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 @media screen and (max-width: 768px) {
